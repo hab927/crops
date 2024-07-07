@@ -1,0 +1,56 @@
+.bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/bg.jpg');
+    background-size: cover;
+}
+
+#can-button {
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+    border-width: 5px;
+    border-color: aliceblue;
+    min-width: 170px;
+}
+
+#can-button.active {
+    background-color: greenyellow;
+    padding: 10px;
+    border-radius: 10px;
+    border-width: 5px;
+    border-color: greenyellow;
+}
+
+#can-tooltip {
+    font-size: 18px;
+}
+
+#can {
+    width: 72px;
+    height: 72px;
+}
+
+#farm {
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+#farm > .plot {
+    background-color: greenyellow;
+    border: 2px solid black;
+    height: 120px;
+    width: 120px;
+    font-size: 20px;
+}
+
+#plot:hover {
+    background-color:hsl(from greenyellow 55 50 60);
+}
+
+#tooltip-color {
+    font-weight: bold;
+    font-size: 20px;
+}
