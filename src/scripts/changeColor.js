@@ -10,7 +10,7 @@ async function changeColor(plotString) {
         $(plot).removeClass('unwatered').addClass('watered');
         timers[plotString] = setTimeout(() => {
             $(plot).removeClass('watered').addClass('unwatered');
-        }, 2000);
+        }, 5000);
     }
     else {
         if (!$(plot).hasClass('watered')) {
