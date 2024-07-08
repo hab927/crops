@@ -1,11 +1,20 @@
-const unwatered = "rgb(84, 44, 0)";
-const watered   = "rgb(54, 24, 0)";
+const timers = {};
 
 async function changeColor(plotString) {
     let plot = document.getElementById(plotString);
+
     if (wateringMode) {
-        plot.style.backgroundColor = watered;
-        await new Promise(res => setTimeout(res, 5000));
-        plot.style.backgroundColor = unwatered;
+        if (timers[plotString]) {
+            clearTimeout(timers[plotString]);
+        }
+        $(plot).removeClass('unwatered').addClass('watered');
+        timers[plotString] = setTimeout(() => {
+            $(plot).removeClass('watered').addClass('unwatered');
+        }, 2000);
+    }
+    else {
+        if (!$(plot).hasClass('watered')) {
+            $(plot).addClass('unwatered');
+        }
     }
 }

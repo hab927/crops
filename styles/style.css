@@ -3,6 +3,34 @@
     background-size: cover;
 }
 
+.watered {
+    background-color: rgb(44, 17, 0);
+    -webkit-transition: background-color 50ms linear;
+    -ms-transition: background-color 50ms linear;
+    transition: background-color 50ms linear;
+}
+
+.watered:active {
+    background-color: rgb(34, 12, 0);
+    -webkit-transition: background-color 50ms linear;
+    -ms-transition: background-color 50ms linear;
+    transition: background-color 50ms linear;
+}
+
+.unwatered {
+    background-color: rgb(84, 44, 0);
+    -webkit-transition: background-color 50ms linear;
+    -ms-transition: background-color 50ms linear;
+    transition: background-color 50ms linear;
+}
+
+.unwatered:active {
+    background-color: rgb(64, 32, 0);
+    -webkit-transition: background-color 50ms linear;
+    -ms-transition: background-color 50ms linear;
+    transition: background-color 50ms linear;
+}
+
 #can-button {
     background-color: aliceblue;
     padding: 10px;
@@ -39,7 +67,6 @@
 }
 
 #farm > .plot {
-    background-color: greenyellow;
     border: 2px solid black;
     height: 120px;
     width: 120px;
